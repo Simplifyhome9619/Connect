@@ -21,8 +21,10 @@
 
 .journey__lede {
   color: var(--cream-dim);
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-weight: 300;
+  letter-spacing: 0.005em;
   margin: 0;
 }
 
