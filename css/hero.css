@@ -388,6 +388,51 @@
   color: var(--cream-dim);
 }
 
+/* ---- Compact stats strip inside form card ---- */
+
+.stats-mini {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin: 0 0 1.1rem;
+  padding: 0.55rem 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--cream-line);
+  border-radius: 6px;
+  list-style: none;
+}
+
+.stats-mini li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.15rem;
+}
+
+.stats-mini__num {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--cream);
+  letter-spacing: -0.005em;
+  line-height: 1;
+}
+
+.stats-mini__num span {
+  color: var(--think);
+  font-weight: 400;
+  margin-left: 1px;
+}
+
+.stats-mini__lbl {
+  font-size: 0.6rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  font-weight: 400;
+}
+
 /* ---- Required marker on labels ---- */
 
 .field__lbl .req {
