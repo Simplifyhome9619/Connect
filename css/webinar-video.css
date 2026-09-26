@@ -1,0 +1,66 @@
+/* =========================================================
+   webinar-video.css
+   Preview video section between reviews and journey.
+   Fonts inherit from base.css shared classes so this section
+   reads as part of the same design system as journey.
+   ========================================================= */
+
+.wv {
+  background: var(--bg);
+  padding: 5rem 0 6rem;
+}
+
+.wv__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.wv__title {
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  line-height: 1.3;
+  margin: 0 0 1rem;
+}
+
+.wv__lede {
+  color: var(--cream-dim);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-weight: 300;
+  letter-spacing: 0.005em;
+  margin: 0 auto 2.5rem;
+  max-width: 620px;
+}
+
+.wv__frame {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  aspect-ratio: 9 / 16;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #0e0a06;
+  box-shadow:
+    0 22px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px var(--cream-line) inset;
+}
+
+.wv__video,
+.wv__frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+  display: block;
+  background: #0e0a06;
+}
+
+@media (max-width: 600px) {
+  .wv { padding: 3.5rem 0 4rem; }
+  .wv__lede { margin-bottom: 1.75rem; }
+  .wv__frame { max-width: 320px; }
+}
