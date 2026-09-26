@@ -17,20 +17,20 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/base.css?v=20260925j" />
   <link rel="stylesheet" href="css/hero.css?v=20260925j" />
   <link rel="stylesheet" href="css/framework.css?v=20260925j" />
   <link rel="stylesheet" href="css/host.css?v=20260925j" />
   <link rel="stylesheet" href="css/reviews.css?v=20260925j" />
-  <link rel="stylesheet" href="css/webinar-video.css?v=20260926a" />
+  <link rel="stylesheet" href="css/webinar-video.css?v=20260926d" />
   <link rel="stylesheet" href="css/journey.css?v=20260925j" />
   <link rel="stylesheet" href="css/countdown-strip.css?v=20260925j" />
   <link rel="stylesheet" href="css/faq.css?v=20260925j" />
   <link rel="stylesheet" href="css/banner.css?v=20260925j" />
   <link rel="stylesheet" href="css/footer.css?v=20260925j" />
-  <link rel="stylesheet" href="css/responsive.css?v=20260925j" />
+  <link rel="stylesheet" href="css/responsive.css?v=20260926d" />
 </head>
 <body>
 
@@ -448,13 +448,19 @@
       <h2 class="serif wv__title">Where the &#8377;5 Lakhs quietly goes?</h2>
       <p class="wv__lede">A quick look at the small decisions that quietly cost most &#8377;25 Lakhs+ homeowners lakhs &mdash; and the ones worth pausing on before you sign.</p>
       <div class="wv__frame">
-        <iframe
-          src="https://www.youtube.com/embed/3KC8VMczVgw"
-          title="Where the 5 Lakhs quietly goes"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
+        <button
+          type="button"
+          class="wv__facade"
+          data-yt="3KC8VMczVgw"
+          aria-label="Play preview video">
+          <img
+            src="https://i.ytimg.com/vi/3KC8VMczVgw/hqdefault.jpg"
+            alt=""
+            loading="lazy"
+            decoding="async"
+            width="480" height="360" />
+          <span class="wv__play" aria-hidden="true">&#9654;</span>
+        </button>
       </div>
     </div>
   </section>
@@ -698,6 +704,6 @@
     </nav>
   </div>
 
-  <script src="js/main.js?v=20260925k" defer></script>
+  <script src="js/main.js?v=20260926d" defer></script>
 </body>
 </html>

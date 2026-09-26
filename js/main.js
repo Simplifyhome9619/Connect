@@ -229,4 +229,23 @@
     pauseWrap.addEventListener("mouseenter", () => window.clearInterval(timer));
     pauseWrap.addEventListener("mouseleave", restart);
   }
+
+  /* ---- YouTube facade: click the thumbnail, swap in the real iframe ---- */
+  // Keeps the initial page free of YouTube's heavy embed until the user
+  // actually wants to watch — big PageSpeed / Best-Practices win.
+  document.querySelectorAll(".wv__facade").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const id = btn.getAttribute("data-yt");
+      if (!id) return;
+      const iframe = document.createElement("iframe");
+      iframe.src =
+        "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0";
+      iframe.title = btn.getAttribute("aria-label") || "Video";
+      iframe.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+      iframe.allowFullscreen = true;
+      btn.replaceWith(iframe);
+    });
+  });
 })();
